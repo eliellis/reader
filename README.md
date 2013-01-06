@@ -1,4 +1,7 @@
 ## reader is a content extractor for node
+### Installation:
+`npm install reader`
+
 ### Usage:
 ```javascript
 var reader = require('reader');
