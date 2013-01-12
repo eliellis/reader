@@ -1,7 +1,6 @@
 cheerio = require('cheerio');
 async = require('async');
 
-var MAXRANKING = 100;
 var reader = {
   negative: ['share','head','foot','ad','clearfix','widget','navigat','comment', 'image', 'media', 'meta', 'promo', 'rss', 'shoutbox', 'sponsor', 'side'],
   positive: ['instapaper_body', 'body', 'page', 'content', 'contents,', 'text', 'article', 'blog', 'post', 'main', 'story-body', 'article-body', 'post-body']
@@ -83,7 +82,7 @@ module.exports = function(context, finished){
               callback(null, weight); //negative value because we want the largest weighing item at the top
             },
             function(err, results){
-              finished((results[0]) ? results[0].text() : undefined);
+              finished((results[0] || !err) ? undefined : new Error('A result could not be found. Are you sure this is an article?'), (results[0]) ? results[0].text() : undefined);
             });
       });
   });

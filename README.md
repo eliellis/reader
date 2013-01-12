@@ -5,7 +5,7 @@
 ### Usage:
 ```javascript
 var reader = require('reader');
-reader(html, function(text){
-    console.log('yo man, you can read this article now', text);
+reader(html, function(err, text){
+    if (!err) console.log('check out this sweet article', text);
 });
 ```
