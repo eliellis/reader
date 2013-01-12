@@ -6,6 +6,6 @@
 ```javascript
 var reader = require('reader');
 reader(html, function(err, text){
-    if (!err) console.log('check out this sweet article', text);
+    if (!err) console.log('check out this sweet article bro: ', text);
 });
 ```
