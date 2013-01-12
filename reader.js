@@ -78,7 +78,6 @@ module.exports = function(context, finished){
                 rank = 0;
               }
               var weight = -(rank);
-              console.log(weight, punctuation, itemText);
               callback(null, weight); //negative value because we want the largest weighing item at the top
             },
             function(err, results){
