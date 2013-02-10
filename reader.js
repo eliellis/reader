@@ -2,7 +2,7 @@ cheerio = require('cheerio');
 async = require('async');
 
 var reader = {
-  negative: ['share','head','foot','ad','clearfix','widget','navigat','comment', 'image', 'media', 'meta', 'promo', 'rss', 'shoutbox', 'sponsor', 'side'],
+  negative: ['share','pagination','head','foot','ad','clearfix','widget','navigat','comment', 'image', 'media', 'meta', 'promo', 'rss', 'shoutbox', 'sponsor', 'side'],
   positive: ['instapaper_body', 'body', 'page', 'content', 'contents,', 'text', 'article', 'blog', 'post', 'main', 'story-body', 'article-body', 'post-body']
 };
 
